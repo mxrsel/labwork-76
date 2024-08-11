@@ -1,8 +1,11 @@
-interface Message {
+export interface Message {
     id: string;
     author: string;
     message: string;
     datetime: string
 }
 
-export type MessageWithoutId = Omit<Message, 'id'>;
+export interface MessageMutation{
+    author: string;
+    message: string;
+}
