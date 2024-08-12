@@ -1,20 +1,9 @@
 import {promises as fs} from 'fs';
 import crypto from 'crypto';
+import {Message, MessageMutation} from './types';
 
 const filename = './database.json';
 let data: Message[] = [];
-
-export interface Message {
-  id: string;
-  author: string;
-  message: string;
-  datetime: string;
-}
-
-export interface MessageMutation {
-  author: string;
-  message: string;
-}
 
 const database = {
   async init() {
